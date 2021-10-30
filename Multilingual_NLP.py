@@ -11,7 +11,7 @@ import ast
 t1,t2 = st.columns(2)
 
 with t1:
-    st.title('Multilingual NLP App')
+    st.title('Multilingual NLP')
 with t2:
     st.markdown("\n" + 'https://stanfordnlp.github.io/stanza/' + "\n\n\n" + '**Pretrained neural models supporting 66 (human) languages**')
 
@@ -117,9 +117,9 @@ def Sentiment_Analysis(langid,sentstr):
     l = sent_tokenize(sentstr)
     for i, sentence in enumerate(doc.sentences):
         if sentence.sentiment == 0:res = "Negative Sentiment : "
-        if sentence.sentiment == 1: res = "Neutral Sentiment"
-        if sentence.sentiment == 2: res = "Positive Sentiment"
-        f.write(res + str(l[i-0] + "\n"))
+        if sentence.sentiment == 1: res = "Neutral Sentiment : "
+        if sentence.sentiment == 2: res = "Positive Sentiment : "
+        f.write(res + str(l[i-0] + "\n\n"))
     f.close()
     o = open("out.txt", "r", encoding="utf-8").read()
     return o
@@ -134,7 +134,7 @@ def Language_Detection(sample_list):
     f = codecs.open("out.txt", "w", encoding="utf-8")
     docs = [Document([], text=text) for text in docs]
     nlp(docs)
-    f.write("\n\n".join(f"{doc.text}\t" + lang_word[doc.lang] for doc in docs))
+    f.write("\n\n".join(f"{doc.text}\t : " + lang_word[doc.lang] for doc in docs))
     f.close()
     o = open("out.txt", "r", encoding="utf-8").read()
     return o
