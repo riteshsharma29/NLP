@@ -2,7 +2,7 @@
 
 Natural Language Processing apps 
 
-################################################## Multilingual_NLP.py ################################################## start
+Multilingual_NLP.py ################################################## start
 
 #This script is demonstartion of Multilingual Natural Language Processing app using Stanza,Streamlit mainly.
 
@@ -34,4 +34,4 @@ Refer Supported_Languages sheet in stanza_supported_languages.xlsx and check for
 
 Update langtable sheet in stanza_supported_languages.xlsx if you wish to add OR delete languages. Mostly nlp_langid	are transid same however google around for transid.
 
-################################################## Multilingual_NLP.py ################################################## end
+Multilingual_NLP.py ################################################## end
