@@ -25,11 +25,11 @@ Refer Supported_Languages sheet in stanza_supported_languages.xlsx and check for
 #command prompt Sample code to download the language model is as follows :
 
 import stanza
-# to download language model for Afrikaans
+# For eg to download language model for Afrikaans run below command
 stanza.download('af')
-# to download language model for German
+# For eg to download language model for German run below command
 stanza.download('de')
-# to download multilingual model 
+# to download multilingual model run below command
 stanza.download("multilingual")
 
 Update langtable sheet in stanza_supported_languages.xlsx if you wish to add OR delete languages. Mostly nlp_langid	are transid same however google around for transid.
